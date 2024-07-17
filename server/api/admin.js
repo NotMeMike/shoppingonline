@@ -2,10 +2,54 @@ const express = require('express');
 const router = express.Router();
 // utils
 const JwtUtil = require('../utils/JwtUtil');
+const EmailUtil = require('../utils/EmailUtil');
 // daos
 const ProductDAO = require('../models/ProductDAO');
 const CategoryDAO = require('../models/CategoryDAO');
 const AdminDAO = require('../models/AdminDAO');
+const OrderDAO = require('../models/OrderDAO');
+const CustomerDAO = require('../models/CustomerDAO');
+// customer
+router.get('/customers', JwtUtil.checkToken, async function (req, res) {
+  const customers = await CustomerDAO.selectAll();
+  res.json(customers);
+});
+router.put('/customers/deactive/:id', JwtUtil.checkToken, async function (req, res) {
+  const _id = req.params.id;
+  const token = req.body.token;
+  const result = await CustomerDAO.active(_id, token, 0);
+  res.json(result);
+});
+router.get('/customers/sendmail/:id', JwtUtil.checkToken, async function (req, res) {
+  const _id = req.params.id;
+  const cust = await CustomerDAO.selectByID(_id);
+  if (cust) {
+    const send = await EmailUtil.send(cust.email, cust._id, cust.token);
+    if (send) {
+      res.json({ success: true, message: 'Please check email' });
+    } else {
+      res.json({ success: false, message: 'Email failure' });
+    }
+  } else {
+    res.json({ success: false, message: 'Not exists customer' });
+  }
+});
+// order
+router.get('/orders', JwtUtil.checkToken, async function (req, res) {
+  const orders = await OrderDAO.selectAll();
+  res.json(orders);
+});
+router.put('/orders/status/:id', JwtUtil.checkToken, async function (req, res) {
+  const _id = req.params.id;
+  const newStatus = req.body.status;
+  const result = await OrderDAO.update(_id, newStatus);
+  res.json(result);
+});
+router.get('/orders/customer/:cid', JwtUtil.checkToken, async function (req, res) {
+  const _cid = req.params.cid;
+  const orders = await OrderDAO.selectByCustID(_cid);
+  res.json(orders);
+});
 // category
 router.get('/categories', JwtUtil.checkToken, async function (req, res) {
   const categories = await CategoryDAO.selectAll();
