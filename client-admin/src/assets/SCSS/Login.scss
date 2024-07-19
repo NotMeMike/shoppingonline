@@ -1,0 +1,108 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-background {
+    background: url('../Image/test.jpg') no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .login-container {
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        .login-input {
+            .custom-input {
+                position: relative;
+
+                i {
+                    position: relative;
+                    right: -196px;
+                    top: -39px;
+                }
+            }
+        }
+
+        .login-content {
+            padding: 10px;
+
+            .text-login {
+                text-align: center;
+                font-weight: 600;
+                font-size: 24px;
+                padding-top: 10px;
+                margin-bottom: 20px;
+                color: #333;
+
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+
+                td {
+                    padding: 8px;
+                    vertical-align: middle;
+                    color: #333;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+
+            .form-control-1 {
+                margin: -2px;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+                color: #333;
+                box-sizing: border-box;
+                transition: all 0.3s ease;
+                padding-right: 40px;
+
+                &:focus {
+                    border-color: #007bff;
+                    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+                    outline: none;
+
+                }
+
+            }
+
+            span {
+                position: absolute;
+                padding: 10px;
+                display: flex;
+            }
+        }
+
+        .form-login {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            transition: all 0.3s ease;
+
+
+        }
+
+    }
+}

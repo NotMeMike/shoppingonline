@@ -1,0 +1,50 @@
+.product-list-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+
+    .text-center {
+        margin-bottom: 20px;
+        color: #343a40;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 20px;
+
+        th, td {
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .product-row {
+            &:hover {
+                background-color: #e9ecef;
+                cursor: pointer;
+            }
+        }
+
+        .product-image {
+            width: 100px;
+            height: 100px;
+        }
+
+        .pagination-container {
+            text-align: center;
+
+            .pagination-item {
+                margin: 0 5px;
+                cursor: pointer;
+
+                &.active {
+                    font-weight: bold;
+                    color: #007bff;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+

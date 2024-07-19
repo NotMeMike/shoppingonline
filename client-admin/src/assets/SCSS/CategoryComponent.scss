@@ -1,0 +1,32 @@
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.table-container {
+  width: 100%;
+  max-width: 1200px; /* Optional: Set a max width for larger screens */
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table-dark {
+  background-color: #343a40;
+  color: #fff;
+}

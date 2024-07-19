@@ -1,0 +1,45 @@
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.float-right {
+  float: right;
+  margin-top: 7px;
+}
+
+.body-customer {
+  .border-bottom {
+    margin-left: -150px;
+    margin-right: -150px;
+  }
+}
+
+.float-left {
+  display: flex;
+  margin-top: 7px;
+
+  ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: auto;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        color: #333;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+  }
+}

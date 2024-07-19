@@ -1,0 +1,62 @@
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between; 
+  
+}
+
+.float-left {
+   display: flex;
+  ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 828px; 
+    li {
+      display: inline-block;
+      margin-right: 10px; 
+      a {
+        color: #333;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+  }
+}
+
+.float-right {
+  float: right;
+  margin-top: 7px; 
+  .navbar-text {
+    margin-top: -21px;
+    margin-left: 866px; 
+    
+    i.logout {
+      font-size: 24px; 
+    }
+  }
+}
+
+.float-clear {
+  clear: both;
+}
+
+.footer-logo {
+  width: 150px; 
+}
+
+.logo{
+  width: 100px; 
+  height: auto;
+}
+
+
+i{
+  color: black;
+}

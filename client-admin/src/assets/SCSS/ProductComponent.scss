@@ -1,0 +1,26 @@
+.product-component {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 50%; /* Đặt chiều rộng cho phần tử */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước bên ngoài */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .table-dark {
+    background-color: #343a40;
+    color: #fff;
+  }
+.text-center1{
+  text-align: left;
+} 
