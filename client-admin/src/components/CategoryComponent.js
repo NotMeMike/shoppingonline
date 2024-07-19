@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid'; // Import uuid
 import '../assets/SCSS//CategoryComponent.scss'; // Import SCSS for Category
 import MyContext from '../contexts/MyContext';
 import CategoryDetail from './CategoryDetailComponent';
-import FooterComponent from './FooterComponent'; // Ensure correct import
+// import FooterComponent from './FooterComponent'; // Ensure correct import
 
 class Category extends Component {
     static contextType = MyContext; // using this.context to access global state
