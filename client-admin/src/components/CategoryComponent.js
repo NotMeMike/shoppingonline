@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-// import { v4 as uuidv4 } from 'uuid'; // Import uuid
-// import '../assets/SCSS//CategoryComponent.scss'; // Import SCSS for Category
+import { v4 as uuidv4 } from 'uuid'; // Import uuid
+import '../assets/SCSS//CategoryComponent.scss'; // Import SCSS for Category
 import MyContext from '../contexts/MyContext';
-// import CategoryDetail from './CategoryDetailComponent';
+import CategoryDetail from './CategoryDetailComponent';
 // import FooterComponent from './FooterComponent'; // Ensure correct import
 
 class Category extends Component {
